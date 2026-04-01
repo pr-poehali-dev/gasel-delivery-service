@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import Icon from "@/components/ui/icon";
 
 const TRUCK_IMAGE = "https://cdn.poehali.dev/projects/4a003fd6-c86a-4f2a-a535-e6526bf3cbbb/files/d893ec01-a636-4b21-b925-c79414bf9c69.jpg";
+const MOVERS_IMAGE = "https://cdn.poehali.dev/projects/4a003fd6-c86a-4f2a-a535-e6526bf3cbbb/files/4e3ac0ce-25a6-4feb-ab29-2b7334f458c8.jpg";
+const LOADING_IMAGE = "https://cdn.poehali.dev/projects/4a003fd6-c86a-4f2a-a535-e6526bf3cbbb/files/b0e6503b-f57b-4287-be91-91af5d0ca04a.jpg";
+const WORKERS_IMAGE = "https://cdn.poehali.dev/projects/4a003fd6-c86a-4f2a-a535-e6526bf3cbbb/files/ba7d497b-6caf-4793-8f64-30b38242670d.jpg";
 
 const NAV_LINKS = [
   { label: "Услуги", href: "#services" },
@@ -424,8 +427,48 @@ export default function Index() {
         </div>
       </section>
 
+      {/* PHOTO GALLERY */}
+      <section className="py-16 px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12 animate-on-scroll">
+            <div className="divider-orange mx-auto mb-4" />
+            <h2 className="section-title text-4xl sm:text-5xl text-white mb-4">Наша Работа</h2>
+            <p className="text-gray-400 text-lg">Как мы работаем — в фотографиях</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 animate-on-scroll">
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 group cursor-pointer h-64 md:h-80">
+              <img src={LOADING_IMAGE} alt="Погрузка газели" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/80 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4">
+                <span className="text-xs text-brand-orange font-medium uppercase tracking-wider bg-[#FF6B00]/15 border border-[#FF6B00]/30 px-3 py-1 rounded-full">Погрузка</span>
+                <div className="font-oswald font-bold text-white text-lg mt-1">Газель ГАЗ</div>
+              </div>
+            </div>
+
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 group cursor-pointer h-64 md:h-80">
+              <img src={MOVERS_IMAGE} alt="Профессиональные грузчики" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/80 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4">
+                <span className="text-xs text-brand-orange font-medium uppercase tracking-wider bg-[#FF6B00]/15 border border-[#FF6B00]/30 px-3 py-1 rounded-full">Переезд</span>
+                <div className="font-oswald font-bold text-white text-lg mt-1">Грузчики</div>
+              </div>
+            </div>
+
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 group cursor-pointer h-64 md:h-80">
+              <img src={WORKERS_IMAGE} alt="Разнорабочие на объекте" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/80 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4">
+                <span className="text-xs text-brand-orange font-medium uppercase tracking-wider bg-[#FF6B00]/15 border border-[#FF6B00]/30 px-3 py-1 rounded-full">Стройка</span>
+                <div className="font-oswald font-bold text-white text-lg mt-1">Разнорабочие</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* REVIEWS */}
-      <section id="reviews" className="py-24 px-4 sm:px-6">
+      <section id="reviews" className="py-24 px-4 sm:px-6 bg-[#1A1A1A]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-on-scroll">
             <div className="divider-orange mx-auto mb-4" />
